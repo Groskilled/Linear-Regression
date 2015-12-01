@@ -1,1 +1,5 @@
-Go away !
+In this project, I try to predict the price of a car according to its mileage.
+
+To do so, I use a list of peugeot 207 in Paris. For each sale we have the mileage and the corresponding price.
+
+For now this is only in python, using matplotlib to display what we want to display, numpy for the matrices.
