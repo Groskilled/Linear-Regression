@@ -18,7 +18,7 @@ def gradientDescent(X, Y, theta0, theta1):
             theta1 = theta1 - tmptheta1
 
 def main():
-    cr = csv.reader(open("../Data.csv","rb"))
+    cr = csv.reader(open("../../Data.csv","rb"))
     X = []
     Y = []
     for row in cr:

@@ -3,7 +3,7 @@
 import csv
 import matplotlib.pyplot as plt
 
-cr = csv.reader(open("../Data.csv","rb"))
+cr = csv.reader(open("../../Data.csv","rb"))
 X = []
 Y = []
 for row in cr:
