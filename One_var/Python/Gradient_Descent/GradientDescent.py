@@ -9,8 +9,8 @@ def gradientDescent(X, Y, theta0, theta1):
     alpha = 0.0001
     while (1):
         hyp = (theta0 + X * theta1) - Y
-        tmptheta0 = (alpha / X.ndim) * hyp.sum()
-        tmptheta1 = (alpha / X.ndim) * (hyp * X).sum()
+        tmptheta0 = (alpha / len(X)) * hyp.sum()
+        tmptheta1 = (alpha / len(X)) * (hyp * X).sum()
         if (abs(tmptheta0) < 0.000001 and abs(tmptheta1) < 0.000001):
             return[theta0 * 10000, theta1]
         else:
@@ -31,12 +31,12 @@ def main():
     Y = Y * 10000
     Yest = theta[0] + X * theta[1]
     plt.plot(X, Y, 'ro')
-    plt.plot(X, abs(Yest))
+    plt.plot(X, Yest)
     plt.show()
     while (1):
         print("Unter a mileage.")
         ret = int(sys.stdin.readline())
-        print("Estimated mileage is : %d" %(theta[0] + theta[1] * ret))
+        print("Estimated selling price is : %d" %(theta[0] + theta[1] * ret))
 
 if __name__ == "__main__":
     main()
